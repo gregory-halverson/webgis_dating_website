@@ -3,6 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>WebGIS 690E Spring 2016 Assignment 1</title>
+    <style>
+        fieldset
+        {
+            background: lightyellow;
+            border: 10px solid yellow;
+            margin-bottom: 10px;
+            width: 720px;
+        }
+
+        label
+        {
+            width: 180px;
+            display: inline-block;
+            text-align: right;
+            vertical-align: top;
+        }
+
+        .radiostyle
+        {
+            width: auto;
+        }
+
+        .rangestyle
+        {
+            text-align: center;
+            width: 50px;
+        }
+
+        .rangestyle-left
+        {
+            background-color: darkred;
+            color: white;
+        }
+
+        .rangestyle-right
+        {
+            background-color: darkblue;
+            color: white;
+        }
+
+        textarea
+        {
+            width: 360px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
     <h1>Please Enter Your Details For Our Dating Website</h1>
@@ -28,9 +74,12 @@
             <br>
 
             <label for="gender">Gender:</label>
-            <input type="radio" id="gender" name="gender" value="Male" required>
-            <input type="radio" id="gender" name="gender" value="Female" required>
-            <br>
+            <span class="radiostyle">
+                <input type="radio" id="gender" name="gender" value="Male" required>Male
+                <input type="radio" id="gender" name="gender" value="Female" required>Female
+                <br>
+            </span>
+
 
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" required>
@@ -59,11 +108,15 @@
             <legend>Your Indicators</legend>
 
             <label for="height">Height:</label>
+            <label for="height" class="rangestyle rangestyle-left">Short</label>
             <input type="range" id="height" name="height" min="0" max="100" value="50">
+            <label for="height" class="rangestyle rangestyle-right">Tall</label>
             <br>
 
             <label for="salary">Salary:</label>
+            <label for="salary" class="rangestyle rangestyle-left">Poor</label>
             <input type="range" id="salary" name="salary" min="0" max="100" value="50">
+            <label for="salary" class="rangestyle rangestyle-right">Rich</label>
             <br>
         </fieldset>
 
@@ -83,11 +136,12 @@
             <br>
 
             <label for="contact">Method to contact you:</label>
-            <input type="checkbox" id="contact" name="contact" value="email">Email
-            <input type="checkbox" id="contact" name="contact" value="whatsapp">Whatsapp
-            <input type="checkbox" id="contact" name="contact" value="in-app-chat">In-app chat
-            <br>
-
+            <span class="radiostyle">
+                <input type="checkbox" id="contact" name="contact" value="email">Email
+                <input type="checkbox" id="contact" name="contact" value="whatsapp">Whatsapp
+                <input type="checkbox" id="contact" name="contact" value="in-app-chat">In-app chat
+                <br>
+            </span>
         </fieldset>
 
         <input type="submit" id="submit" name="submit" value="Submit">
