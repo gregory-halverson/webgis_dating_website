@@ -1,96 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>WebGIS 690E Spring 2016 Assignment 1</title>
-</head>
-<body>
-    <h1>Please Enter Your Details For Our Dating Website</h1>
+    <head>
+        <meta charset="UTF-8">
+        <title>WebGIS 690E Spring 2016 Assignment 1</title>
+    </head>
+    <body>
+        <h1>Please Enter Your Details For Our Dating Website</h1>
 
-    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
-          method="get"
-          enctype="multipart/form-data"
-          id="bio-submit"
-          name="bio-submit">
+        <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"
+              method="get"
+              enctype="multipart/form-data"
+              id="bio-submit"
+              name="bio-submit">
 
-        <fieldset id="your-face" name="your-face" form="bio-submit">
-            <legend>Your Face</legend>
-            <label for="profile-picture">Your image:</label>
-            <input type="file" id="profile-picture" name="profile-picture">
-            <img id="preview">
-        </fieldset>
+            <fieldset id="your-face" name="your-face" form="bio-submit">
+                <legend>Your Face</legend>
+                <label for="profile-picture">Your image:</label>
+                <input type="file" id="profile-picture" name="profile-picture">
+                <img id="preview">
+            </fieldset>
 
-        <fieldset id="your-general-details" name="your-general-details" form="bio-submit">
-            <legend>Your General Details</legend>
+            <fieldset id="your-general-details" name="your-general-details" form="bio-submit">
+                <legend>Your General Details</legend>
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" autofocus required>
-            <br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autofocus required>
+                <br>
 
-            <label for="gender">Gender:</label>
-            <input type="radio" id="gender" name="gender" value="Male" required>
-            <input type="radio" id="gender" name="gender" value="Female" required>
-            <br>
+                <label>Gender:</label>
+                <input type="radio" id="gender-male" name="gender" value="Male" required>
+                <label for="gender-male" class="radiostyle">Male</label>
+                <input type="radio" id="gender-female" name="gender" value="Female" required>
+                <label for="gender-female" class="radiostyle">Female</label>
+                <br>
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
-            <br>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+                <br>
 
-            <label for="birthdate">Date of birth:</label>
-            <input type="date" id="birthdate" name="birthdate" required>
-            <br>
+                <label for="birthdate">Date of birth:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <br>
 
-            <label for="color">Favorite color:</label>
-            <input type="color" id="color" name="color" required>
-            <br>
+                <label for="color">Favorite color:</label>
+                <input type="color" id="color" name="color" required>
+                <br>
 
-            <label for="country">Which country:</label>
-            <select id="country" name="country" required>
-                <option>United States</option>
-                <option>Japan</option>
-                <option>Russia</option>
-                <option>Germany</option>
-                <option>France</option>
-                <option>United Kingdom</option>
-            </select>
-        </fieldset>
+                <label for="country">Which country:</label>
+                <select id="country" name="country" required>
+                    <option>United States</option>
+                    <option>Japan</option>
+                    <option>Russia</option>
+                    <option>Germany</option>
+                    <option>France</option>
+                    <option>United Kingdom</option>
+                </select>
+            </fieldset>
 
-        <fieldset id="your-indicators" name="your-indicators" form="bio-submit">
-            <legend>Your Indicators</legend>
+            <fieldset id="your-indicators" name="your-indicators" form="bio-submit">
+                <legend>Your Indicators</legend>
 
-            <label for="height">Height:</label>
-            <input type="range" id="height" name="height" min="0" max="100" value="50">
-            <br>
+                <label for="height">Height:</label>
+                <label for="height" class="rangestyle rangestyle-left">Short</label>
+                <input type="range" id="height" name="height" min="0" max="100" value="50">
+                <label for="height" class="rangestyle rangestyle-right">Tall</label>
+                <br>
 
-            <label for="salary">Salary:</label>
-            <input type="range" id="salary" name="salary" min="0" max="100" value="50">
-            <br>
-        </fieldset>
+                <label for="salary">Salary:</label>
+                <label for="salary" class="rangestyle rangestyle-left">Poor</label>
+                <input type="range" id="salary" name="salary" min="0" max="100" value="50">
+                <label for="salary" class="rangestyle rangestyle-right">Rich</label>
+                <br>
+            </fieldset>
 
-        <fieldset id="your-contact-information" name="your-contact-information" form="bio-submit">
-            <legend>Your Contact Information</legend>
+            <fieldset id="your-contact-information" name="your-contact-information" form="bio-submit">
+                <legend>Your Contact Information</legend>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
 
-            <label for="mobile">Mobile:</label>
-            <input type="tel" id="mobile" name="mobile" required>
-            <br>
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+                <br>
 
-            <label for="address">Address:</label>
-            <textarea id="address" name="address"></textarea>
-            <br>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+                <br>
 
-            <label for="contact">Method to contact you:</label>
-            <input type="checkbox" id="contact" name="contact" value="email">Email
-            <input type="checkbox" id="contact" name="contact" value="whatsapp">Whatsapp
-            <input type="checkbox" id="contact" name="contact" value="in-app-chat">In-app chat
-            <br>
+                <label>Method to contact you:</label>
+                <input type="checkbox" id="contact-email" name="contact" value="email">
+                <label for="contact-email" class="radiostyle">Email</label>
+                <input type="checkbox" id="contact-whatsapp" name="contact" value="whatsapp">
+                <label for="contact-whatsapp" class="radiostyle">Whatsapp</label>
+                <input type="checkbox" id="contact-chat" name="contact" value="in-app-chat">
+                <label for="contact-chat" class="radiostyle">In-app chat</label>
+                <br>
+            </fieldset>
 
-        </fieldset>
-
-        <input type="submit" id="submit" name="submit" value="Submit">
-    </form>
-</body>
+            <input type="submit" id="submit" name="submit" value="Submit">
+        </form>
+    </body>
 </html>
